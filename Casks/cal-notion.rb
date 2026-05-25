@@ -1,6 +1,6 @@
 cask "cal-notion" do
   version "1.0.0"
-  sha256 "e4f269bb89a1f8e7081426d0f4ed364b2bf62b04a097eb79ed8bd66974a2e011"
+  sha256 "d857e13fbf31eeb65c7f13228c1ff7b982eb0ce61efa138b929d8f827c12890b"
 
   url "https://github.com/dkeg/cal-notion/releases/download/v#{version}/CalNotion-v#{version}.dmg"
   name "Cal → Notion"
