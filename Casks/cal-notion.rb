@@ -1,5 +1,5 @@
 cask "cal-notion" do
-  version "1.0.0"
+  version "1.5.0"
   sha256 "d857e13fbf31eeb65c7f13228c1ff7b982eb0ce61efa138b929d8f827c12890b"
 
   url "https://github.com/dkeg/cal-notion/releases/download/v#{version}/CalNotion-v#{version}.dmg"
