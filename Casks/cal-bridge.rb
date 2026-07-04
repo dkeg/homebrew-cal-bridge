@@ -1,6 +1,6 @@
 cask "cal-bridge" do
-  version "1.14.0"
-  sha256 "4376570bff7e2c0f521b6f6bca51c568a313e47f8de220712d3629d5f180d56e"
+  version "1.14.1"
+  sha256 "97a3a0df1a088b866889699eba6eadeb3ddc450391c2f67bff45d467b4055ac0"
 
   url "https://github.com/dkeg/cal-bridge/releases/download/v#{version}/CalBridge-v#{version}.dmg"
   name "CalBridge"
