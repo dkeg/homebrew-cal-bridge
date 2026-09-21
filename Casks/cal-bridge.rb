@@ -1,15 +1,21 @@
 cask "cal-bridge" do
-  version "1.14.1"
-  sha256 "97a3a0df1a088b866889699eba6eadeb3ddc450391c2f67bff45d467b4055ac0"
+  version "1.15.0"
+  sha256 "cbc8a992272b6621edb1d3a833a781029cf77968c04f81cc3bb9db364b2d5d03"
 
   url "https://github.com/dkeg/cal-bridge/releases/download/v#{version}/CalBridge-v#{version}.dmg"
   name "CalBridge"
-  desc "macOS menu bar app that syncs Google Calendar to Notion and Obsidian"
+  desc "macOS menu bar app that syncs Google Calendar events to Notion, Obsidian, or Bear"
   homepage "https://github.com/dkeg/cal-bridge"
 
   depends_on macos: ">= :ventura"
 
   app "CalBridge.app"
+
+  postflight do
+    system_command "#{staged_path}/CalBridge.app/Contents/Resources/scripts/install.sh",
+                   args: ["--silent"],
+                   sudo: false
+  end
 
   zap trash: [
     "~/Library/Application Support/CalBridge",
