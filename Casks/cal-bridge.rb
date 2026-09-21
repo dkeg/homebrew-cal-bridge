@@ -7,15 +7,9 @@ cask "cal-bridge" do
   desc "macOS menu bar app that syncs Google Calendar events to Notion, Obsidian, or Bear"
   homepage "https://github.com/dkeg/cal-bridge"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "CalBridge.app"
-
-  postflight do
-    system_command "#{staged_path}/CalBridge.app/Contents/Resources/scripts/install.sh",
-                   args: ["--silent"],
-                   sudo: false
-  end
 
   zap trash: [
     "~/Library/Application Support/CalBridge",
